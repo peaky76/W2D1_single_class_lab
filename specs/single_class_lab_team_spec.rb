@@ -37,7 +37,7 @@ class TestTeam < Minitest::Test
 
     def test_update_coach()
         team = Team.new("Bradford City", ["Smith", "Jones"], "Brown")
-        team.update_coach("Green")
+        team.coach = "Green"
         assert_equal("Green", team.coach())
     end        
 
