@@ -24,5 +24,9 @@ class Student
     def talk()
         return "I can talk!"
     end
-    
+
+    def display_favourite_language(language)
+        return "#{@name}'s favourite language is #{language}."
+    end
+
 end
