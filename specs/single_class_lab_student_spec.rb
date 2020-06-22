@@ -17,7 +17,7 @@ class TestStudent < Minitest::Test
 
     def test_cohort()
         student = Student.new("Robert", "E41")
-        assert_equal("E41", student[:cohort])
+        assert_equal("E41", student.cohort())
     end
 
 end
