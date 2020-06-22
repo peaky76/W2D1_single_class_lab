@@ -15,15 +15,22 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new()
 
 class TestStudent < Minitest::Test
 
+    def test_name()
+        student = Student.new("Alan", "G19")
+        assert_equal("Alan", student.name())
+    end
+
     def test_cohort()
         student = Student.new("Robert", "E41")
         assert_equal("E41", student.cohort())
     end
 
-    def test_name()
-        student = Student.new("Alan", "G19")
-        assert_equal("Alan", student.name())
+    def test_set_name()
+        student = Student.new("Beryl", "E42")
+        student.set_name("Cheryl")
+        assert_equal("Cheryl", student.name())
     end
+        
 
 end
 
