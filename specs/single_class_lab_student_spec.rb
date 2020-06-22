@@ -43,6 +43,18 @@ class TestStudent < Minitest::Test
         assert_equal("I can talk!", result)
     end
 
+    def test_display_favourite_language_ruby()
+        student = Student.new("Frank", "G21")
+        result = student.display_favourite_language("Ruby")
+        assert_equal("Frank's favourite language is Ruby.", result)
+    end
+
+    def test_display_favourite_language_java()
+        student = Student.new("Graham", "G21")
+        result = student.display_favourite_language("Java")
+        assert_equal("Graham's favourite language is Java.", result)
+    end
+
 end
 
 
