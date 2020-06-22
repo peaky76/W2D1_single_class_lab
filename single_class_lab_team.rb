@@ -18,4 +18,14 @@ class Team
         return @players.include?(player)
     end
 
+    def add_result(result)
+        case result
+        when "win"
+            @points += 3
+        when "draw"
+            @points += 1
+        end
+    end
+
+
 end
