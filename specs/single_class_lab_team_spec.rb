@@ -38,13 +38,13 @@ class TestTeam < Minitest::Test
     end
 
     def test_check_player_true()
-        player_in_team = @team2.check_player("Cannon")
-        assert(player_in_team)
+        player_is_in_team = @team2.check_player("Cannon")
+        assert(player_is_in_team)
     end
 
     def test_check_player_false()
-        player_in_team = @team2.check_player("Monkhouse")
-        assert(!player_in_team)
+        player_is_in_team = @team2.check_player("Monkhouse")
+        assert(!player_is_in_team)
     end
 
     def test_points()
