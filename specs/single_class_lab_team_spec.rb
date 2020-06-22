@@ -20,18 +20,18 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new()
 class TestTeam < Minitest::Test
 
     def test_name()
-        team = Team.new("Bradford City", ["Smith", "Jones"], ["Brown"])
+        team = Team.new("Bradford City", ["Smith", "Jones"], "Brown")
         assert_equal("Bradford City", team.name())
     end
 
     def test_players()
-        team = Team.new("Bradford City", ["Smith", "Jones"], ["Brown"])
+        team = Team.new("Bradford City", ["Smith", "Jones"], "Brown")
         players = ["Smith", "Jones"]
         assert_equal(players, team.players())
     end
 
     def test_coach()
-        team = Team.new("Bradford City", ["Smith", "Jones"], ["Brown"])
+        team = Team.new("Bradford City", ["Smith", "Jones"], "Brown")
         assert_equal("Brown", team.coach())
     end
 
