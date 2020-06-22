@@ -1,6 +1,3 @@
-# * Create a method that takes in whether the team has won or lost and updates the points property for a win.
-
-
 require('minitest/autorun')
 require('minitest/reporters')
 require_relative('../single_class_lab_team')
@@ -41,13 +38,13 @@ class TestTeam < Minitest::Test
     end
 
     def test_check_player_true()
-        @team2.check_player("Cannon")
-        assert(true)
+        result = @team2.check_player("Cannon")
+        assert_equal(true, result)
     end
 
     def test_check_player_false()
-        @team2.check_player("Monkhouse")
-        assert(true)
+        result = @team2.check_player("Monkhouse")
+        assert_equal(false, result)
     end
 
     def test_points()
