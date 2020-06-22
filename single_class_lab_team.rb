@@ -9,8 +9,12 @@ class Team
         @coach = coach
     end
 
-    def add_player(new_player)
-        @players << new_player
+    def add_player(player)
+        @players << player
+    end
+
+    def check_player(player)
+        return @players.include?(player)
     end
 
 end

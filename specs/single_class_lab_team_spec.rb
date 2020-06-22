@@ -43,7 +43,7 @@ class TestTeam < Minitest::Test
     end
 
     def test_check_player_true()
-        @team2.check_player("Davro")
+        @team2.check_player("Cannon")
         assert(true)
     end
 
