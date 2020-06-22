@@ -26,7 +26,11 @@ class Student
     end
 
     def display_favourite_language(language)
-        return "#{@name}'s favourite language is #{language}."
+        if (language != nil)
+            return "#{@name}'s favourite language is #{language}."
+        else 
+            return "#{@name} doesn't have a favourite language"
+        end
     end
 
 end
