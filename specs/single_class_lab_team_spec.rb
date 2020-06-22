@@ -38,13 +38,13 @@ class TestTeam < Minitest::Test
     end
 
     def test_check_player_true()
-        result = @team2.check_player("Cannon")
-        assert_equal(true, result)
+        player_in_team = @team2.check_player("Cannon")
+        assert(player_in_team)
     end
 
     def test_check_player_false()
-        result = @team2.check_player("Monkhouse")
-        assert_equal(false, result)
+        player_in_team = @team2.check_player("Monkhouse")
+        assert(!player_in_team)
     end
 
     def test_points()
@@ -57,8 +57,8 @@ class TestTeam < Minitest::Test
     end
 
     def test_add_result_lose()
-        @team2.add_result("lose")
-        assert_equal(0, @team2.points())
+        @team1.add_result("lose")
+        assert_equal(0, @team1.points())
     end
 
     def test_add_result_draw()

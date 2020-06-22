@@ -51,7 +51,6 @@ class TestStudent < Minitest::Test
         assert_equal("Hilda doesn't have a favourite language", result)
     end
 
-
 end
 
 
