@@ -20,6 +20,11 @@ class TestStudent < Minitest::Test
         assert_equal("E41", student.cohort())
     end
 
+    def test_name()
+        student = Student.new("Alan", "G19")
+        assert_equal("Alan", student.name())
+    end
+
 end
 
 
